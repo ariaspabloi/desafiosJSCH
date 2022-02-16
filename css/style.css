@@ -20,6 +20,7 @@ body {
 .header {
     position: sticky;
     top: 0;
+    padding-top: 1em;
     display: grid;
     grid-template-columns: 10% auto;
     grid-template-areas: "headerLogo headerNav";
@@ -59,7 +60,13 @@ body {
     grid-area: headerNav;
     display: flex;
     justify-content: end;
-    column-gap: 1em;
+    column-gap: 0.5em;
+    padding-left: 2em;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: violet;
 }
 
 .challenges {
