@@ -119,6 +119,8 @@ body {
 .challenges__button--source {}
 
 .challenges__source-link {
+    color: white;
+    text-decoration: none;
     position: relative;
     bottom: 1px;
 }
