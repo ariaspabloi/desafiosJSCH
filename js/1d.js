@@ -1,11 +1,11 @@
 function main1d() {
-    let opcion = 0;
+    let option = 0;
     let total = 0;
     console.log("Bienvenidos a compra de productos, elegir entre los productos 1,2,3,4");
     do {
         console.log("Ingrese el numero del articulo 1,2,3,4 o ingrese 0 para salir");
-        opcion = parseInt(prompt("Que articulo desea agregar?"));
-        total += price(opcion);
+        option = parseInt(prompt("Que articulo desea agregar?"));
+        total += price(option);
     } while (option != 0);
     console.log("Total final: $" + total);
 }
