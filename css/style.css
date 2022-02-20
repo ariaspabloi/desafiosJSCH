@@ -71,7 +71,6 @@ body {
 }
 
 .challenges {
-    display: grid;
     color: whitesmoke;
     padding-top: 5em;
 }
@@ -85,6 +84,7 @@ body {
     border-radius: 8px;
     border-color: gray;
     padding: 1em 0.5em;
+    margin-bottom: 1.5em;
 }
 
 .challenges__buttons {
