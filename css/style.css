@@ -39,8 +39,6 @@ body {
     font-size: 8px;
 }
 
-.header__logo__text {}
-
 .main {
     min-height: 80vh;
     padding-top: 2em;
@@ -124,8 +122,6 @@ body {
     font-size: 1.5em;
     max-height: 2em;
 }
-
-.challenges__button--source {}
 
 .challenges__source-link {
     color: white;
