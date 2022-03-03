@@ -86,8 +86,6 @@ body {
 }
 
 .challenges__buttons {
-    display: flex;
-    justify-content: space-around;
     margin-top: 1em;
 }
 
@@ -108,19 +106,20 @@ body {
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     padding: 6px 16px;
     position: relative;
     text-align: center;
     text-decoration: none;
+    margin: 0.8em auto;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
     white-space: nowrap;
-    width: 30%;
+    width: 60%;
     font-size: 1.5em;
-    max-height: 2em;
+    height: 2em;
 }
 
 .challenges__source-link {
@@ -166,6 +165,14 @@ body {
     }
     .challenges__new {
         padding: 1em 2em;
+    }
+    .challenges__buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1em;
+    }
+    .challenges__button {
+        width: 30%;
     }
     .nav {
         column-gap: 2em;

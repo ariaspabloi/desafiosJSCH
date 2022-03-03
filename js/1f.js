@@ -34,7 +34,6 @@ class Orden {
         for (let i = 0; i < this.ramenes.length; i++) {
             console.log(this.ramenes[i].nombre + ": " + this.cantidad[i]);
         }
-        ramenes.forEach(r => console.log(r.nombre + ": " + r.cantidad));
         console.log("Total:" + this.getTotal());
     }
 
@@ -50,20 +49,34 @@ class Orden {
 
 
 function main1f() {
+    //Creacion de ramenes y de orden
+    let option = 0;
     const ramenes = [];
     ramenes.push(new Ramen("Ribu ramen", 12000, ["Caldo de costilla", "Zanahoria", "Cebollin", "Dientes de dragon", "Carne de cerdo", "Huevo"]));
     ramenes.push(new Ramen("Vegie Ramen", 10000, ["Caldo de verduras", "Zanahoria", "Cebollin", "Dientes de dragon", "Champiñones", "Zucchini", "Huevo"]));
     ramenes.push(new Ramen("Tori Ramen", 12500, ["Caldo de pollo", "Zanahoria", "Cebollin", "Dientes de dragon", "Champiñones", "Pollo"]));
     const orden = new Orden(ramenes);
 
+    //Mostrar ramenes
     for (const r of ramenes) r.detail();
-
-    let option = 0;
-    console.log("Bienvenidos a compra de productos, elegir entre los productos 1,2,3");
+    //Menu
     do {
-        console.log("Ingrese el numero del articulo 1,2,3 o ingrese 0 para salir");
-        option = parseInt(prompt("Que articulo desea agregar?"));
+        console.log("Ingrese el numero del articulo 1,2,3 , o ingrese 4 para buscar por ingrediente o ingrese 0 para salir");
+        option = parseInt(prompt("Ingrese articulo u operacion"));
+        if (option == 4) {
+            //Buscar por ingrediente
+            filtrarPorIngrediente(ramenes);
+            continue;
+        }
+        //Ingresar producto
         orden.addProduct(option - 1);
     } while (option != 0);
+    //Detalle de ordenes
     orden.getDetail();
+}
+
+function filtrarPorIngrediente(ramenes) {
+    let ingrediente = prompt("Que ingrediente busca");
+    let ramenesFiltrados = ramenes.filter(r => r.ingredientes.includes(ingrediente));
+    ramenesFiltrados.forEach(r => r.detail());
 }

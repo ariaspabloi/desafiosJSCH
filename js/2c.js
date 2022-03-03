@@ -1,3 +1,5 @@
+//Clases mejoradas definidas en 1f.js
+/*
 class Ramen {
     constructor(nombre, precio, ingredientes, disponible = true) {
         this.nombre = nombre;
@@ -45,8 +47,7 @@ class Orden {
         return total;
     }
 }
-
-
+*/
 
 function main2c() {
     const ramenes = [];
