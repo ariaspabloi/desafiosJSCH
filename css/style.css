@@ -94,6 +94,27 @@ body {
     font-size: 1.2em;
 }
 
+.challenges__box {
+    height: 200px;
+    width: 80%;
+    background-color: #774A95;
+    margin: 0 auto;
+    border: 10px solid #523368;
+    border-radius: 5px;
+}
+
+.challenges__box-description {
+    font-weight: lighter;
+    font-size: larger;
+}
+
+.challenges__editBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* CSS */
 

@@ -51,19 +51,18 @@ class Orden {
 
 function main2c() {
     const ramenes = [];
-    ramenes.push(new Ramen("Ribu ramen", 12000, ["Caldo de costilla", "Zanahoria", "Cebollin", "Dientes de dragon", "Carne de cerdo", "Huevo"]));
-    ramenes.push(new Ramen("Vegie Ramen", 10000, ["Caldo de verduras", "Zanahoria", "Cebollin", "Dientes de dragon", "Champiñones", "Zucchini", "Huevo"]));
-    ramenes.push(new Ramen("Tori Ramen", 12500, ["Caldo de pollo", "Zanahoria", "Cebollin", "Dientes de dragon", "Champiñones", "Pollo"]));
+    ramenes.push(new Ramen(1, "Ribu ramen", 12000, ["Caldo de costilla", "Zanahoria", "Cebollin", "Dientes de dragon", "Carne de cerdo", "Huevo"]));
+    ramenes.push(new Ramen(2, "Vegie Ramen", 10000, ["Caldo de verduras", "Zanahoria", "Cebollin", "Dientes de dragon", "Champiñones", "Zucchini", "Huevo"]));
+    ramenes.push(new Ramen(3, "Tori Ramen", 12500, ["Caldo de pollo", "Zanahoria", "Cebollin", "Dientes de dragon", "Champiñones", "Pollo"]));
     const orden = new Orden(ramenes);
 
     for (const r of ramenes) r.detail();
 
     let option = 0;
-    console.log("Bienvenidos a compra de productos, elegir entre los productos 1,2,3");
+    alert("Ingrese el numero del articulo 1,2,3 o ingrese 0 para salir");
     do {
-        console.log("Ingrese el numero del articulo 1,2,3 o ingrese 0 para salir");
         option = parseInt(prompt("Que articulo desea agregar?"));
         orden.addProduct(option - 1);
     } while (option != 0);
-    orden.getDetail();
+    alert(orden.getDetail());
 }
