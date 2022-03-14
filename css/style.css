@@ -95,7 +95,7 @@ body {
 }
 
 .challenges__box {
-    height: 200px;
+    min-height: 200px;
     width: 80%;
     background-color: #774A95;
     margin: 0 auto;
@@ -117,7 +117,7 @@ body {
 
 .challenges_editBox-noFlex {
     display: inline-block;
-    padding-left: 50%;
+    padding-left: 10%;
 }
 
 .challenges__products-buttons {
