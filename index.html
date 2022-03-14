@@ -11,6 +11,7 @@
     <script src="js/2c.js"></script>
     <script src="js/1f.js"></script>
     <script src="js/3c.js"></script>
+    <script src="js/2d.js"></script>
     <title>Desafios curso JavaScript</title>
 </head>
 
@@ -86,6 +87,42 @@
                     <h4 class="challenges__box-description"><i>Caja de cambios</i></h4>
                     <div class="challenges__editBox" id="box-c2">
 
+                    </div>
+                </div>
+            </article>
+            <article class="challenges__new">
+                <h3 class="challenges__title">DESAFÍO Nº 2</h3>
+                <p class="challenges__description">INCORPORAR EVENTOS</p>
+                <p class="challenges__description">Calculador de costo total de productos con detalle</p>
+                <p class="challenges__description">(APRETAR RUN PARA EJECUTAR)</p>
+                <div class="challenges__buttons">
+                    <button class="challenges__button challenges__button--run" onclick="main2d()"><span>Run</span></button>
+                    <a class="challenges__button challenges__button--source challenges__source-link" href="https://github.com/MrBlo/desafiosJSCH/blob/main/js/2d.js"><span>Script</span></a>
+                </div>
+                <div class="challenges__box">
+                    <h4 class="challenges__box-description"><i>Caja de cambios</i></h4>
+                    <div class="challenges__editBox challenges_editBox-noFlex" id="box-c2">
+                        <p id="challenges__status-d2">
+                            <b>Script no corriendo</b>
+                        </p>
+                        <div class="challenges__products-buttons">
+                            <button id="removeProduct1">-</button>
+                            <span>Producto 1</span>
+                            <button id="addProduct1">+</button>
+                        </div>
+                        <div class="challenges__products-buttons">
+                            <button id="removeProduct2">-</button>
+                            <span>Producto 2</span>
+                            <button id="addProduct2">+</button>
+                        </div>
+                        <div class="challenges__products-buttons">
+                            <button id="removeProduct3">-</button>
+                            <span>Producto 3</span>
+                            <button id="addProduct3">+</button>
+                        </div>
+                        <div class="challenges__products-buttons">
+                            <span>Detalle</span><button id="showDetail">Ver</button>
+                        </div>
                     </div>
                 </div>
             </article>

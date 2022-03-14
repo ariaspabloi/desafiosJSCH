@@ -27,7 +27,11 @@ class Orden {
     }
 
     addProduct(i) {
-        if (i >= 0 || i < this.ramenes.length) ++this.cantidad[i];
+        if (i >= 0 && i < this.ramenes.length) ++this.cantidad[i];
+    }
+
+    removeProduct(i) {
+        if (i >= 0 && i < this.ramenes.length && this.cantidad[i] > 0) --this.cantidad[i];
     }
 
     getDetail() {

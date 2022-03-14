@@ -115,6 +115,20 @@ body {
     align-items: center;
 }
 
+.challenges_editBox-noFlex {
+    display: inline-block;
+    padding-left: 50%;
+}
+
+.challenges__products-buttons {
+    font-size: 1.2em;
+}
+
+.challenges__products-buttons button {
+    font-size: 0.9em;
+    width: 50px;
+}
+
 
 /* CSS */
 
