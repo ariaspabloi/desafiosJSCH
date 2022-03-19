@@ -69,6 +69,8 @@ body {
 }
 
 .challenges {
+    display: flex;
+    flex-direction: column-reverse;
     color: whitesmoke;
     padding-top: 5em;
 }
