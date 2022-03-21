@@ -51,7 +51,7 @@ function setInfo(day) {
     weatherState.innerText = data.consolidated_weather[day].weather_state_name;
     actualTemperature.innerText = `${data.consolidated_weather[day].the_temp.toFixed(2)}°C`;
     minTemperature.innerText = `Temperatura minima: ${data.consolidated_weather[day].min_temp.toFixed(2)}°C`;
-    weatherState.innerText = data.consolidated_weather[day].weather_state_name  ;
+    weatherState.innerText = data.consolidated_weather[day].weather_state_name;
     maxTemperature.innerText = `Temperatura maxima: ${data.consolidated_weather[day].max_temp.toFixed(2)}°C`;
     weatherBox.innerHTML = "";
 
@@ -117,20 +117,18 @@ function setBackground() {
     } else {
         set("default-background.jpg");
     }
-
-
 }
 
 //Fetch and Storage functions
 async function locationSearch() {
     let searchText = document.getElementById('searchTxt').value;
-    let data = await fetchData(`https://www.metaweather.com/api/location/search/?query=${searchText}`);
-    localStorage.setItem('woeid', data.length===0 ? -1 : data[0].woeid);
+    let data = await fetchData(`https://immense-lake-21479.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${searchText}`);
+    localStorage.setItem('woeid', data.length === 0 ? -1 : data[0].woeid);
 }
 
 async function weatherInfoSearch() {
     let woeid = localStorage.getItem('woeid');
-    localStorage.setItem("data", JSON.stringify(await fetchData(`https://www.metaweather.com/api/location/${woeid}/`)));
+    localStorage.setItem("data", JSON.stringify(await fetchData(`https://immense-lake-21479.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)));
 }
 
 async function fetchData(url) {
