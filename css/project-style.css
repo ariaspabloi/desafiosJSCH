@@ -24,7 +24,7 @@ main {
 
 .weather {
     color: white;
-    height: 500px;
+    min-height: 500px;
     width: 800px;
     background-color: #555555;
     position: absolute;
@@ -34,89 +34,86 @@ main {
     transform: translate(-50%, -50%);
     opacity: 0.87;
     box-shadow: 0 0 50px #ccc;
+    text-align: center;
 }
 
-.weather__header{
+.weather__header {
     text-align: center;
     margin-top: 25px;
 }
 
-#searchTxt{
+#searchTxt {
     margin-top: 10px;
     height: 28px;
     text-align: center;
 }
 
-#searchBtn{
-  background-color: whitesmoke;
-  border-radius: 8px;
-  border-width: 0;
-  color: #333333;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 5px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+#searchBtn {
+    background-color: whitesmoke;
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 5px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
-.weather__body{
+.weather__body {
     padding: 20px;
     background-color: #333333;
     border-radius: 10px;
     font-size: 1.2em;
     margin: 40px auto;
-    height: 60%;
+    height: 500px;
     width: 80%;
     display: grid;
     grid-template-columns: 4fr 3fr;
     grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas: 
-    "titles titles"
-    "info temperatures"
-    "buttons buttons";
+    grid-template-areas: "titles titles" "info temperatures" "buttons buttons";
     row-gap: 25px;
     justify-items: center;
     align-items: center;
 }
 
-
-.weather__titles{
-  grid-area: titles;
-  text-align: center;
-  align-self: start;
+.weather__titles {
+    grid-area: titles;
+    text-align: center;
+    align-self: start;
 }
 
-.weather__info{
+.weather__info {
     grid-area: info;
     text-align: center;
 }
 
-.weather__temperatures{
+.weather__temperatures {
     font-size: 1.1rem;
     grid-area: temperatures;
 }
 
-.weather__buttons{
+.weather__buttons {
     grid-area: buttons;
 }
 
-.weather__buttons button{
+.weather__buttons button {
     height: 30px;
     width: 40px;
     color: white;
     font-size: 1.2rem;
     margin: 0 10px;
-    background-color:#3385ff;
-    border: 2px solid  #3385ff;
+    background-color: #3385ff;
+    border: 2px solid #3385ff;
     border-radius: 10px;
 }
