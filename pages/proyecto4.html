@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima APP</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/weather-favicon.ico">
+    <link rel="stylesheet" href="../css/project-style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <main id="main">
+        <div class="weather">
+            <div class="weather__header">
+                <h1>Clima de Capitales</h1>
+                <p>Lima, Buenos Aires, Santiago, London, etc.</p>
+                <input id="searchTxt" placeholder="Ciudad Capital" type="text">
+                <button id="searchBtn">Buscar</button>
+                <select name="cities" id="cities">
+                    <option value="none">Seleccione ciudad</option>
+                </select>
+            </div>
+
+            <div class="weather__body">
+            </div>
+
+            <p class="weather__sources"></p>
+        </div>
+    </main>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/project4.js"></script>
+</body>
+
+</html>

@@ -20,18 +20,17 @@ main {
     top: 0;
     left: 0;
     background-image: url("../assets/img/default-background.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/img/default-background.jpg");
 }
 
 .weather {
     color: white;
-    min-height: 500px;
-    width: 800px;
+    height: 600px;
+    width: 98%;
     background-color: #555555;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
     opacity: 0.87;
     box-shadow: 0 0 50px #ccc;
     text-align: center;
@@ -39,12 +38,12 @@ main {
 
 .weather__header {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 #searchTxt {
     margin-top: 10px;
-    height: 28px;
+    height: 30px;
     text-align: center;
 }
 
@@ -70,21 +69,27 @@ main {
     touch-action: manipulation;
 }
 
+#cities {
+    display: block;
+    margin: 10px auto;
+    height: 30px;
+    width: 150px;
+}
+
 .weather__body {
-    padding: 20px;
+    padding: 5px 10px;
     background-color: #333333;
     border-radius: 10px;
     font-size: 1.2em;
-    margin: 40px auto;
-    height: 500px;
-    width: 80%;
+    margin: 10px auto;
+    width: 90%;
+    height: 350px;
     display: grid;
-    grid-template-columns: 4fr 3fr;
-    grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas: "titles titles" "info temperatures" "buttons buttons";
-    row-gap: 25px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "titles" "info" "temperatures" "buttons";
     justify-items: center;
-    align-items: center;
+    align-items: start;
 }
 
 .weather__titles {
@@ -108,12 +113,50 @@ main {
 }
 
 .weather__buttons button {
-    height: 30px;
-    width: 40px;
+    height: 25px;
+    width: 30px;
     color: white;
     font-size: 1.2rem;
     margin: 0 10px;
     background-color: #3385ff;
     border: 2px solid #3385ff;
     border-radius: 10px;
+}
+
+@media (min-width: 800px) {
+    .weather {
+        color: white;
+        min-height: 700px;
+        width: 800px;
+        background-color: #555555;
+        opacity: 0.87;
+        box-shadow: 0 0 50px #ccc;
+        text-align: center;
+    }
+    .weather__body {
+        padding: 20px;
+        background-color: #333333;
+        border-radius: 10px;
+        font-size: 1.2em;
+        margin: 40px auto;
+        min-height: 400px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas: "titles titles" "info temperatures" "buttons buttons";
+        row-gap: 25px;
+        justify-items: center;
+        align-items: center;
+    }
+    .weather__buttons button {
+        height: 30px;
+        width: 40px;
+        color: white;
+        font-size: 1.2rem;
+        margin: 0 10px;
+        background-color: #3385ff;
+        border: 2px solid #3385ff;
+        border-radius: 10px;
+    }
 }
