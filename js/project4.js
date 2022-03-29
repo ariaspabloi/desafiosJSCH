@@ -38,8 +38,11 @@ function initSearchEvent() {
 
 function initCitiesEvent() {
     let selectElement = document.querySelector("#cities");
+    let originalF = selectElement.onchange;
     selectElement.onchange = async function() {
+        loadingAlert();
         var index = this.selectedIndex;
+        this.selectedIndex = index;
         var woeid = this.children[index].value;
         localStorage.setItem('woeid', woeid);
         changeWeatherInfo();
@@ -53,11 +56,11 @@ async function searchCity() {
     await fetchLocation();
     //City found?
     if (localStorage.getItem("woeid") == -1) return notFoundAlert();
+    setCitiesOptions();
     changeWeatherInfo();
 }
 
 async function changeWeatherInfo() {
-    setCitiesOptions();
     //Search weather info
     await fetchWeather();
     //Set info on HTML
@@ -69,7 +72,17 @@ async function changeWeatherInfo() {
 function searchingAlert() {
     Toastify({
         text: "Buscando",
-        duration: 3000,
+        duration: 2000,
+        style: {
+            background: "linear-gradient(to right, #06beb6, #48b1bf)",
+        }
+    }).showToast();
+}
+
+function loadingAlert() {
+    Toastify({
+        text: "Cargando...",
+        duration: 1000,
         style: {
             background: "linear-gradient(to right, #06beb6, #48b1bf)",
         }
@@ -79,7 +92,7 @@ function searchingAlert() {
 function notFoundAlert() {
     Toastify({
         text: "Capital no encontrada!",
-        duration: 3000,
+        duration: 2000,
         style: {
             background: "linear-gradient(to right, #ed213a, #93291e)",
         }
