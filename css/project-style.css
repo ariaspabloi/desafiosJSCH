@@ -123,6 +123,10 @@ main {
     border-radius: 10px;
 }
 
+.weather__sources{
+    font-size: 0.8rem;
+}
+
 @media (min-width: 800px) {
     .weather {
         color: white;
